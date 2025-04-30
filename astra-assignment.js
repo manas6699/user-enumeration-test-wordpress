@@ -34,7 +34,6 @@ async function detectUserEnumeration(){
         headers: {
           'Content-Type' : 'application/x-www-form-urlencoded'
         },
-        validateStatus: () => true
       });
       const body = response.data;
 
@@ -65,7 +64,6 @@ async function detectBruteForce(validUsers){
         headers: {
           'Content-Type' : 'application/x-www-form-urlencoded'
         },
-        validateStatus: () => true
       });
       const body = response.data;
       const isFailure = body.includes('incorrect') || body.includes('Invalid username');
