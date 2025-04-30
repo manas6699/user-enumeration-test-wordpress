@@ -36,3 +36,36 @@
 ```
 
 Although I have passed the values by default, you can customize the parameters. 
+## Sample Output
+
+```
+{
+ "target": "http://localhost:8000/wp-login.php",
+ "vulnerabilities": [
+  {
+   "type": "User Enumeration",
+   "detected": true,
+   "vector": "/wp-login.php",
+   "confidence": "medium"
+  },
+  {
+   "type": "Brute-force Login",
+   "detected": true,
+   "vector": "/wp-login.php",
+   "usernames_tested": [
+    "admin",
+    "user1"
+   ],
+   "credentials_found": [
+    {
+     "username": "admin",
+     "password": "admin"
+    }
+   ],
+   "confidence": "high"
+  }
+ ]
+}
+
+```
+
